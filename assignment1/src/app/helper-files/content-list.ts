@@ -21,7 +21,7 @@ export class ContentList {
 
   contentProperties(index: number): string {
     return "<h1>" + this._items[index].title + "</h1>" +
-      '<img src="' + this._items[index].imgUrl + '" alt="pic" width="250" height="250">' +
+      '<img src="' + this._items[index].imgUrl + '" alt="pic" width="325" height="250">' +
       '<h2> Author: ' + this._items[index].author + '</h2>' +
       '<h3> Tags: ' + this._items[index].tags + '</h3>' +
       '<h3> Type: ' + this._items[index].type + '</h3>' +
