@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ContentList} from '../helper-files/content-list';
-import {Content} from "../helper-files/content-interface";
+
+import {Content} from '../helper-files/content-interface';
 
 @Component({
   selector: 'app-content-card',
@@ -9,7 +9,6 @@ import {Content} from "../helper-files/content-interface";
 })
 export class ContentCardComponent implements OnInit {
   display: string;
-  public contentList = new ContentList();
 
   content1: Content = {
     id: 0,
@@ -44,12 +43,13 @@ export class ContentCardComponent implements OnInit {
 
 
   constructor() {
+    /*
     this.contentList.add(this.content1);
     this.contentList.add(this.content2);
     this.contentList.add(this.content3);
     this.display = this.contentList.contentProperties(0) + this.contentList.contentProperties(1) + this.contentList.contentProperties(2);
+  */
   }
-
   ngOnInit(): void {
   }
 
