@@ -1,7 +1,33 @@
-.div {
+.type1 {
   border:1px solid darkred;
   width: 500px;
   padding-left: 75px;
+  padding-bottom: 25px;
+}
+.type2 {
+  border:1px solid green;
+  width: 500px;
+  padding-left: 75px;
+  padding-bottom: 25px;
+}
+.type3 {
+  border:1px dotted blue;
+  width: 500px;
+  padding-left: 75px;
+  padding-bottom: 25px;
+}
+.type4 {
+  border:1px solid deeppink;
+  width: 500px;
+  padding-left: 75px;
+  padding-bottom: 25px;
+}
+
+.type5 {
+  border:1px solid purple;
+  width: 500px;
+  padding-left: 75px;
+  padding-bottom: 25px;
 }
 h1 {
   padding-bottom: 5px;
@@ -11,7 +37,5 @@ h2 {
   padding-top: 15px;
   margin-top:0;
 }
-.lastBox {
-  border:2px solid black;
-}
+
 
