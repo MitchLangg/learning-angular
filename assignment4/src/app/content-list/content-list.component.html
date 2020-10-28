@@ -7,71 +7,76 @@
   <div class ="type1" *ngFor='let item of array | filter: "Anime"; let last = last'
        [ngClass]="{'lastBox': last}">
 
-    <h1>{{item.title}}</h1>
+    <h1 appHoverStyle id="title">{{item.title}}</h1>
     <br>
-    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <img *ngIf="item.imgUrl !== ''; else defaultImage"src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
     <br>
     <h2>{{item.author}}</h2>
     <p>{{item.body}}</p>
     <p>Type: {{item.type}}</p>
-    <p>Tags: {{item.tags}}</p>
+    <p *ngFor="let single of item.tags"><span appHoverStyle id ='tags'>Tags: {{single}}</span></p>
+
 
   </div>
 
   <div class ="type2" *ngFor='let item of array | filter: "Planets"; let last = last'
        [ngClass]="{'lastBox': last}">
 
-    <h1>{{item.title}}</h1>
+    <h1 appHoverStyle id='title'>{{item.title}}</h1>
     <br>
-    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <img *ngIf="item.imgUrl !== ''; else defaultImage"src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
     <br>
     <h2>{{item.author}}</h2>
     <p>{{item.body}}</p>
     <p>Type: {{item.type}}</p>
-    <p>Tags: {{item.tags}}</p>
+    <p *ngFor="let single of item.tags"><span appHoverStyle id='tags'>Tags: {{single}}</span></p>
 
   </div>
 
   <div class ="type3" *ngFor='let item of array | filter: "Cameras"; let last = last'
        [ngClass]="{'lastBox': last}">
 
-    <h1>{{item.title}}</h1>
+    <h1 appHoverStyle id='title'>{{item.title}}</h1>
     <br>
-    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <img *ngIf="item.imgUrl !== ''; else defaultImage"src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
     <br>
     <h2>{{item.author}}</h2>
     <p>{{item.body}}</p>
     <p>Type: {{item.type}}</p>
-    <p>Tags: {{item.tags}}</p>
+    <p *ngFor="let single of item.tags"><span appHoverStyle id='tags'>Tags: {{single}}</span></p>
 
   </div>
 
   <div class ="type4" *ngFor='let item of array | filter: "Plants"; let last = last'
        [ngClass]="{'lastBox': last}">
 
-    <h1>{{item.title}}</h1>
+    <h1 appHoverStyle id='title'>{{item.title}}</h1>
     <br>
-    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <img *ngIf="item.imgUrl !== ''; else defaultImage"src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
     <br>
     <h2>{{item.author}}</h2>
     <p>{{item.body}}</p>
     <p>Type: {{item.type}}</p>
-    <p>Tags: {{item.tags}}</p>
+    <p *ngFor="let single of item.tags"><span appHoverStyle id='tags'>Tags: {{single}}</span></p>
 
   </div>
 
   <div class ="type5" *ngFor='let item of array | filter: "Starbucks"; let last = last'
        [ngClass]="{'lastBox': last}">
 
-    <h1>{{item.title}}</h1>
+    <h1 appHoverStyle id='title'>{{item.title}}</h1>
     <br>
-    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <img *ngIf="item.imgUrl !== ''; else defaultImage"src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
     <br>
     <h2>{{item.author}}</h2>
     <p>{{item.body}}</p>
     <p>Type: {{item.type}}</p>
-    <p>Tags: {{item.tags}}</p>
+    <p *ngFor="let single of item.tags"><span appHoverStyle id='tags'>Tags: {{single}}</span></p>
 
   </div>
+
+  <ng-template #defaultImage>
+    <img src="https://lh3.googleusercontent.com/pw/ACtC-3cq67cFV9pmzZLWMeja_H9wQytG7Ax6Rzj_fvmx6xEm9N6SQNsFmC9-WIYNLgYUq8NRbMMWH9xST-Lp-H8-bUa2zOrxEa2IleIsNnI1wm0NTmsdEN2guSD6NAb28aij0FFVmRSra4AhHAAcL9iSkxw=w605-h404-no?authuser=0" width="300" height="300"/>
+  </ng-template>
 
 

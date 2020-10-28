@@ -25,7 +25,7 @@ export class ContentListComponent implements OnInit {
     this.array = [{
       id: 0,
       author: 'Mitch Lang',
-      imgUrl: 'https://lh3.googleusercontent.com/pw/ACtC-3di6ShYSC2mSwfvgamkxmvPcEUo_31Goerb5i1TofPI0sqLlleE19r-saOZhRiu0kdqOujaEmdYRREhhraoj40BcChz34Te1CLJ9L6c9E8u9LSB36mu--jz3iwvbq05m-nfpgjdBWk4A83im6UfeTA=w1400-h700-no?authuser=0',
+      imgUrl: '',
       type: 'Anime',
       title: 'Content #1',
       body: 'This is the first piece of content.',

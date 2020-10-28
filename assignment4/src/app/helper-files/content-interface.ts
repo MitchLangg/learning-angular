@@ -3,7 +3,7 @@ export interface Content {
   author: string;
   imgUrl?: string;
   type?: string;
-  title: string;
-  body: string;
+  title?: string;
+  body?: string;
   tags?: [string];
 }
