@@ -1,0 +1,77 @@
+  <div class ="userInput">
+    <input type="text" [(ngModel)]="originalTitle"/>
+    <button (click)="titleCheck(originalTitle)"> Check</button>
+    <p>{{output}}</p>
+  </div>
+
+  <div class ="type1" *ngFor='let item of array | filter: "Anime"; let last = last'
+       [ngClass]="{'lastBox': last}">
+
+    <h1>{{item.title}}</h1>
+    <br>
+    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <br>
+    <h2>{{item.author}}</h2>
+    <p>{{item.body}}</p>
+    <p>Type: {{item.type}}</p>
+    <p>Tags: {{item.tags}}</p>
+
+  </div>
+
+  <div class ="type2" *ngFor='let item of array | filter: "Planets"; let last = last'
+       [ngClass]="{'lastBox': last}">
+
+    <h1>{{item.title}}</h1>
+    <br>
+    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <br>
+    <h2>{{item.author}}</h2>
+    <p>{{item.body}}</p>
+    <p>Type: {{item.type}}</p>
+    <p>Tags: {{item.tags}}</p>
+
+  </div>
+
+  <div class ="type3" *ngFor='let item of array | filter: "Cameras"; let last = last'
+       [ngClass]="{'lastBox': last}">
+
+    <h1>{{item.title}}</h1>
+    <br>
+    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <br>
+    <h2>{{item.author}}</h2>
+    <p>{{item.body}}</p>
+    <p>Type: {{item.type}}</p>
+    <p>Tags: {{item.tags}}</p>
+
+  </div>
+
+  <div class ="type4" *ngFor='let item of array | filter: "Plants"; let last = last'
+       [ngClass]="{'lastBox': last}">
+
+    <h1>{{item.title}}</h1>
+    <br>
+    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <br>
+    <h2>{{item.author}}</h2>
+    <p>{{item.body}}</p>
+    <p>Type: {{item.type}}</p>
+    <p>Tags: {{item.tags}}</p>
+
+  </div>
+
+  <div class ="type5" *ngFor='let item of array | filter: "Starbucks"; let last = last'
+       [ngClass]="{'lastBox': last}">
+
+    <h1>{{item.title}}</h1>
+    <br>
+    <img src={{item.imgUrl}} height="250" width="300" (click)="this.clickForId(item)" alt=""/>
+    <br>
+    <h2>{{item.author}}</h2>
+    <p>{{item.body}}</p>
+    <p>Type: {{item.type}}</p>
+    <p>Tags: {{item.tags}}</p>
+
+  </div>
+
+
