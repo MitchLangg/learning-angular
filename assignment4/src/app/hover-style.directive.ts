@@ -7,10 +7,10 @@ export class HoverStyleDirective implements OnInit {
 
   constructor(private elm: ElementRef) { }
 
-  @HostListener('hoverOn') onEnter(): void {
+  @HostListener('mouseenter') onEnter(): void {
     this.elementOn();
   }
-  @HostListener('hoverOff') onExit(): void {
+  @HostListener('mouseleave') onExit(): void {
     this.elementOff();
   }
   private elementOn(): void {
