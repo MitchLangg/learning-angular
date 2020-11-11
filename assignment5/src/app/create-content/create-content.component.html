@@ -1,0 +1,41 @@
+<h1>Create Content!</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="userForm" id="createContentForm">
+
+  <div class="section">
+    <label for="userId">Id: </label>
+    <input type="number" id="userId" formControlName="userId" required>
+  </div>
+
+  <div class="section">
+    <label for="userAuthor">Author: </label>
+    <input type="text" id="userAuthor" formControlName="userAuthor" required>
+  </div>
+
+  <div class="section">
+    <label for="userImgUrl">Image: </label>
+    <input type="text" id="userImgUrl" formControlName="userImgUrl" required>
+  </div>
+
+  <div class="section">
+    <label for="userTitle">Title: </label>
+    <input type="text" id="userTitle" formControlName="userTitle" required>
+  </div>
+
+  <div class="section">
+    <label for="userTags">Tags: </label>
+    <input type="text" id="userTags" formControlName="userTags">
+  </div>
+
+  <div class="section">
+    <label for="userType">Type: </label>
+    <input type="text" id="userType" formControlName="userType" required>
+  </div>
+
+  <div class="section">
+    <label for="userBody">Body: </label>
+    <input type="text" id="userBody" formControlName="userBody" required>
+  </div>
+
+  <button type="submit">Submit!</button>
+  <p class="error" *ngIf="badForm">The Content couldnt be added.</p>
+</form>

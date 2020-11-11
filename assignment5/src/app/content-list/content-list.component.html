@@ -4,7 +4,7 @@
     <p>{{output}}</p>
   </div>
 
-  <div class ="type1" *ngFor='let item of array | filter: "Anime"; let last = last'
+  <div class ="type1" *ngFor='let item of localArray | filter: "Anime"; let last = last'
        [ngClass]="{'lastBox': last}">
 
     <h1 appHoverStyle id="title">{{item.title}}</h1>
@@ -19,7 +19,7 @@
 
   </div>
 
-  <div class ="type2" *ngFor='let item of array | filter: "Planets"; let last = last'
+  <div class ="type2" *ngFor='let item of localArray | filter: "Planets"; let last = last'
        [ngClass]="{'lastBox': last}">
 
     <h1 appHoverStyle id='title'>{{item.title}}</h1>
@@ -33,7 +33,7 @@
 
   </div>
 
-  <div class ="type3" *ngFor='let item of array | filter: "Cameras"; let last = last'
+  <div class ="type3" *ngFor='let item of localArray | filter: "Cameras"; let last = last'
        [ngClass]="{'lastBox': last}">
 
     <h1 appHoverStyle id='title'>{{item.title}}</h1>
@@ -47,7 +47,7 @@
 
   </div>
 
-  <div class ="type4" *ngFor='let item of array | filter: "Plants"; let last = last'
+  <div class ="type4" *ngFor='let item of localArray | filter: "Plants"; let last = last'
        [ngClass]="{'lastBox': last}">
 
     <h1 appHoverStyle id='title'>{{item.title}}</h1>
@@ -61,7 +61,7 @@
 
   </div>
 
-  <div class ="type5" *ngFor='let item of array | filter: "Starbucks"; let last = last'
+  <div class ="type5" *ngFor='let item of localArray | filter: "Starbucks"; let last = last'
        [ngClass]="{'lastBox': last}">
 
     <h1 appHoverStyle id='title'>{{item.title}}</h1>

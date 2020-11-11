@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Content} from '../helper-files/content-interface';
 import {Pipe, PipeTransform} from '@angular/core';
+import {CreateContentComponent} from '../create-content/create-content.component';
 
 @Pipe({name: 'filter'})
 export class FilterClass implements PipeTransform{
@@ -17,12 +18,14 @@ export class FilterClass implements PipeTransform{
 
 
 export class ContentListComponent implements OnInit {
+  public static array = new Array <Content>();
+  public localArray = ContentListComponent.array;
   displayId: number;
   output = '';
   originalTitle = '';
-  public array = new Array <Content>();
+
   constructor() {
-    this.array = [{
+    this.localArray = [{
       id: 0,
       author: 'Mitch Lang',
       imgUrl: '',
@@ -65,7 +68,7 @@ export class ContentListComponent implements OnInit {
     }];
   }
   public titleCheck(input: string): any {
-    if (this.array.filter(p => p.title.toLowerCase().includes(input.toLowerCase())).length !== 0) {
+    if (this.localArray.filter(p => p.title.toLowerCase().includes(input.toLowerCase())).length !== 0) {
       this.output = 'That an existing title!';
     }else {
       this.output = 'Not an existing title :(';

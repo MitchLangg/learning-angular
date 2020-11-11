@@ -5,8 +5,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import {ContentListComponent, FilterClass} from './content-list/content-list.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HoverStyleDirective } from './hover-style.directive';
+import { CreateContentComponent } from './create-content/create-content.component';
 
 @NgModule({
     declarations: [
@@ -14,12 +15,14 @@ import { HoverStyleDirective } from './hover-style.directive';
         ContentCardComponent,
         ContentListComponent,
         FilterClass,
-        HoverStyleDirective
+        HoverStyleDirective,
+        CreateContentComponent
     ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
