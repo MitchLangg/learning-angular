@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import {Content} from '../helper-files/content-interface';
 import {Pipe, PipeTransform} from '@angular/core';
 import {ContentService} from '../services/content.service';
@@ -14,6 +14,10 @@ export class FilterClass implements PipeTransform{
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
+})
+
+@Injectable({
+  providedIn: 'root'
 })
 
 
@@ -38,6 +42,8 @@ export class ContentListComponent implements OnInit {
     console.log(this.displayId);
   }
   ngOnInit(): void {
-    this.service.getContent().subscribe(item => this.array = item); 
+    this.service.getItems().subscribe(item =>
+      this.array = item);
   }
+
 }
