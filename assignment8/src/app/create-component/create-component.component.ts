@@ -1,14 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ContentListComponent} from '../content-list/content-list.component';
 import {ContentService} from '../services/content.service';
 import {Content} from '../helper-files/content-interface';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+@Component({
+  selector: 'app-create-open-component',
+  templateUrl: './create-open-component.component.html',
+})
+export class CreateOpenComponentComponent {
+  constructor( public dialog: MatDialog){}
+
+  openAMD(): void {
+    const reference = this.dialog.open(CreateComponentComponent, {
+      height: '650px',
+      width: '500px'
+    });
+
+    reference.afterClosed().subscribe(output => {
+      console.log('Closed Dialogue');
+    });
+  }
+}
 
 @Component({
   selector: 'app-create-component',
   templateUrl: './create-component.component.html',
   styleUrls: ['./create-component.component.scss']
 })
+
 export class CreateComponentComponent implements OnInit {
   public id: number;
   public author: string;
@@ -20,7 +41,11 @@ export class CreateComponentComponent implements OnInit {
   public form: FormGroup;
   public validity: boolean;
 
-  constructor(private service: ContentService, private clComponent: ContentListComponent) {
+  constructor(public reference: MatDialogRef<CreateComponentComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: Component,
+              private service: ContentService,
+              private clComponent: ContentListComponent,
+              public dialog: MatDialog) {
     this.validity = false;
   }
 
@@ -76,4 +101,7 @@ export class CreateComponentComponent implements OnInit {
   saveItem(contentItem: Content) {
     this.service.addItem(contentItem).subscribe(item => this.clComponent.array.push(item));
   }
+
+
+
 }

@@ -8,11 +8,15 @@ import {ContentListComponent, FilterClass} from './content-list/content-list.com
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HoverStyleDirective } from './hover-style.directive';
 import { MessagesComponent } from './messages/messages.component';
-import { CreateComponentComponent } from './create-component/create-component.component';
+import { CreateComponentComponent, CreateOpenComponentComponent } from './create-component/create-component.component';
 import { HttpClientModule} from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { InMemoryDataService} from './in-memory-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -21,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         FilterClass,
         HoverStyleDirective,
         MessagesComponent,
-        CreateComponentComponent
+        CreateComponentComponent,
+      CreateOpenComponentComponent
     ],
   imports: [
     BrowserModule,
@@ -29,9 +34,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false,
-        delay: 1000}),
-    BrowserAnimationsModule
+      InMemoryDataService, {
+        dataEncapsulation: false,
+        delay: 1000
+      }),
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

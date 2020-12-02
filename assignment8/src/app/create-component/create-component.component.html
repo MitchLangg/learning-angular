@@ -1,27 +1,41 @@
-<h1>Create</h1>
-<form (ngSubmit)="onSubmit()" [formGroup]="form" id="createContentForm">
+<h1>Create Content</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="form" id="createItemForm">
 
-    <label for="itemId">Id: </label>
-    <input type="number" id="itemId" formControlName="itemId" required>
+  <mat-form-field>
+    <mat-label for="itemId">Content Id: </mat-label>
+    <input matInput type="number" id="itemId" formControlName="itemId" required>
+  </mat-form-field>
   <br>
-    <label for="itemAuthor">Author: </label>
-    <input type="text" id="itemAuthor" formControlName="itemAuthor" required>
+<mat-form-field>
+    <mat-label for="itemAuthor">Author: </mat-label>
+    <input matInput type="text" id="itemAuthor" formControlName="itemAuthor" required>
+</mat-form-field>
   <br>
-    <label for="itemImgUrl">Image: </label>
-    <input type="text" id="itemImgUrl" formControlName="itemImgUrl" required>
+<mat-form-field>
+    <mat-label for="itemImgUrl">Image: </mat-label>
+    <input matInput type="text" id="itemImgUrl" formControlName="itemImgUrl" required>
+</mat-form-field>
   <br>
-    <label for="itemTitle">Title: </label>
-    <input type="text" id="itemTitle" formControlName="itemTitle" required>
+<mat-form-field>
+    <mat-label for="itemType">Type: </mat-label>
+    <input matInput type="text" id="itemType" formControlName="itemType" required>
+</mat-form-field>
   <br>
-    <label for="itemTags">Tags: </label>
-    <input type="text" id="itemTags" formControlName="itemTags" required>
+<mat-form-field>
+    <mat-label for="itemTitle">Title: </mat-label>
+    <input matInput type="text" id="itemTitle" formControlName="itemTitle" required>
+</mat-form-field>
   <br>
-    <label for="itemType">Type: </label>
-    <input type="text" id="itemType" formControlName="itemType" required>
-  <br>
-    <label for="itemBody">Body: </label>
-    <input type="text" id="itemBody" formControlName="itemBody">
-  <br>
-  <button type="submit">Complete</button>
-  <p class="error" *ngIf="validity">The Content failed to be added!</p>
+<mat-form-field>
+    <mat-label for="itemBody">Body: </mat-label>
+    <input matInput type="text" id="itemBody" formControlName="itemBody" required>
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label for="itemTags">Tags: </mat-label>
+    <input matInput type="text" id="itemTags" formControlName="itemTags">
+</mat-form-field>
+<br>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+  <p class="error" *ngIf="validity">Failed to add item.</p>
 </form>
