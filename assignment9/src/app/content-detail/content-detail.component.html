@@ -1,0 +1,12 @@
+<h1 id="title">Title: {{item.title}}</h1>
+<br>
+<h2>Author: {{item.author}}</h2>
+<br>
+<p>Body: {{item.body}}</p>
+<br>
+<p>Type: {{item.type}}</p>
+<br>
+<p>Tags: {{item.tags}}</p>
+<br>
+<a [routerLink]="['/content', item.id]"
+   routerLinkActive="active">Details</a>

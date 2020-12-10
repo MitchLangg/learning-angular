@@ -16,6 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import {RouterModule} from '@angular/router';
+import { InvalidurlComponent } from './invalidurl/invalidurl.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +29,9 @@ import {MatDialogModule} from '@angular/material/dialog';
         HoverStyleDirective,
         MessagesComponent,
         CreateComponentComponent,
-      CreateOpenComponentComponent
+      CreateOpenComponentComponent,
+      ContentDetailComponent,
+      InvalidurlComponent
     ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

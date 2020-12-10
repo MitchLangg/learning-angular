@@ -28,4 +28,8 @@ export class ContentService {
   addItem(content: Content): Observable<any> {
     return this.http.post<Content>('api/item', content, this.httpOptions);
   }
+
+  getItem(id: number): Observable<Content>{
+    return this.http.get<Content>('api/content/' + id);
+  }
 }
